@@ -1,13 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ApolloProvider } from '@apollo/client';
+import { StyleSheet } from 'react-native';
+import client from './apollo/apolloClient';
+import StackNavigations from './navigations/StackNavigations';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <>
+    <ApolloProvider client={client}>
+      <StackNavigations />
+    </ApolloProvider>
+  </>
 }
 
 const styles = StyleSheet.create({
