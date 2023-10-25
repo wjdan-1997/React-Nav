@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Tesat() {
+export default function Test() {
   return (
     <View>
-      <Text>Commit 123</Text>
+      <Text>Test</Text>
     </View>
   )
 }
